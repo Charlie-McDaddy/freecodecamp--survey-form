@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ninja Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title" class="text-center">Ninja Survey Form</h1>
+      <p id="description" class="text-center">Do you want to become a ninja?</p>
+    </header>
+    <div class="container">
+      <form id="survey-form">
+        <!-- name field using text type input-->
+        <div class="input-grp">
+          <label class="input-grp__label name-label" for="name" id="name-label"
+            >Name:
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input-grp__input name-input"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <!-- email field using email type input-->
+        <div class="input-grp">
+          <label
+            class="input-grp__label email-label"
+            for="email"
+            id="email-label"
+            >Email:
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="input-grp__input email-input"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <!-- age field using number type input-->
+        <div class="input-grp">
+          <label
+            class="input-grp__label age-label"
+            for="number"
+            id="number-label"
+            >Age: <span class="clue">(Optional)</span>
+          </label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="input-grp__input age-input"
+            placeholder="Age"
+          />
+        </div>
+        <!-- dropdown list input-->
+        <div class="input-grp">
+          <p class="input-grp__para dropdown">
+            What type of ninja do you want to be?
+          </p>
+          <select
+            name="role"
+            id="dropdown"
+            class="input-grp__input dropdown-input"
+            required
+          >
+            <option disabled selected value>Select ninja type</option>
+            <option value="Kancho">Kancho - ninja spy</option>
+            <option value="Teisatsu">Teisatsu - ninja scout</option>
+            <option value="Kishu">Kishu - stealthy attacker</option>
+            <option value="Konran">Konran - ninja agitator</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <!-- radio button inputs -->
+        <div class="input-grp">
+          <p class="input-grp__para radio-para">
+            Would you recommend becomming a Ninja?
+          </p>
+          <label for="radio-1" class="input-grp__label radio-label">
+            <input
+              type="radio"
+              name="user-recommend"
+              id="radio-1"
+              value="definitely"
+              class="input-radio"
+              checked
+            />Definitely
+          </label>
+          <label for="radio-2" class="input-grp__label radio-label">
+            <input
+              type="radio"
+              name="user-recommend"
+              id="radio-2"
+              value="maybe"
+              class="input-radio"
+            />Maybe
+          </label>
+          <label for="radio-3" class="input-grp__label radio-label">
+            <input
+              type="radio"
+              name="user-recommend"
+              id="radio-3"
+              value="not-sure"
+              class="input-radio"
+            />Not sure
+          </label>
+        </div>
+        <!-- checkbox inputs -->
+        <div class="input-grp">
+          <p class="input-grp__para checkbox-para">
+            What is your favorite ninja weapon?
+            <span class="clue">(You can select more than one)</span>
+          </p>
+          <label for="check-1">
+            <input
+              type="checkbox"
+              name="prefer"
+              id="check-1"
+              class="input-checkbox"
+              value="sword"
+            />Ninja-to <span class="clue">(Sword)</span>
+          </label>
+          <label for="check-2">
+            <input
+              type="checkbox"
+              name="prefer"
+              id="check-2"
+              class="input-checkbox"
+              value="shuriken"
+            />Shuriken <span class="clue">(Ninja stars)</span>
+          </label>
+          <label for="check-3">
+            <input
+              type="checkbox"
+              name="prefer"
+              id="check-3"
+              class="input-checkbox"
+              value="kama"
+            />Kama <span class="clue">(Sickle)</span>
+          </label>
+          <label for="check-4">
+            <input
+              type="checkbox"
+              name="prefer"
+              id="check-4"
+              class="input-checkbox"
+              value="yari"
+            />Yari <span class="clue">(Spear)</span>
+          </label>
+          <label for="check-5">
+            <input
+              type="checkbox"
+              name="prefer"
+              id="check-5"
+              class="input-checkbox"
+              value="kusarigama"
+            />Kusarigama <span class="clue">(Chain and Hook)</span>
+          </label>
+        </div>
+        <div class="input-grp">
+          <p class="input-grp__para textarea-para">
+            Any comments or suggestions?
+          </p>
+          <textarea
+            name="comment"
+            id="comments"
+            class="input-textarea"
+            placeholder="Enter comments here..."
+          ></textarea>
+        </div>
+        <div class="input-grp">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
